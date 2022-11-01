@@ -1,4 +1,4 @@
-package com.exercise.funciones;
+package com.exercise.funciones.function;
 
 import javax.swing.*;
 import java.util.Scanner;

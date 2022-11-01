@@ -1,8 +1,8 @@
-package com.exercise.funciones;
+package com.exercise.funciones.function;
 
 import java.util.Scanner;
 
-public class Funciones5 {
+public class Funciones4 {
 
     public static void main(String[] args) {
 
@@ -14,24 +14,12 @@ public class Funciones5 {
 
         System.out.println();
 
-        int divisor = 2;
 
-        int contador = 0;
+        int factorial = 1;
 
-        for(int i = 0; i <=n; i++) {
-
-            int r = n / divisor;
-
-            contador = r;
-
-            System.out.print(r + " ");
-
-
+        for(int i = n ; i > 1 ; i--){
+            factorial = factorial * i;
+            System.out.println("Factorial " + factorial);
         }
-
-
-
-
-
     }
 }
