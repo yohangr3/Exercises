@@ -1,4 +1,4 @@
-package com.exercise.funciones.exercisespoo;
+package com.exercise.funciones.exercisespoo.exercise1;
 
 public class SmartPhone extends SmartDevice{
 
