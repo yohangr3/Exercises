@@ -1,11 +1,13 @@
 package com.exercise.funciones.exercisespoo.exercise3;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Persona {
 
     private String nombre;
     private int edad;
-    private int dni;
+    private String dni;
     private char sexo = 'H'; //(H hombre , M mujer)
     private double peso; // Peso en kg
     private double altura; // Altua en metros
@@ -20,7 +22,7 @@ public class Persona {
         this.sexo = sexo;
     }
 
-    public Persona(String nombre, int edad, int dni, char sexo, double peso, double altura) {
+    public Persona(String nombre, int edad, String dni, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.dni = dni;
@@ -45,11 +47,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public int getDni() {
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
@@ -97,10 +99,13 @@ public class Persona {
     }
 
     public double esMayorDeEdad(){
-        if(edad >= 0 && edad <= 18){
-            System.out.println("Es menor de edad");
-        }else{
-            System.out.println("Es mayor de edad");
+        if(edad < 0){
+            System.out.println("Error de edad");
+            if( edad < 18){
+                System.out.println("Es menor de edad");
+            }else{
+                System.out.println("Es mayor de edad");
+            }
         }
 
         return edad;
@@ -127,15 +132,48 @@ public class Persona {
                 '}';
     }
 
-    public int generarDNI(){
-        Random random = new Random();
-        int numero = (int) (Math.random()*8+0);
-        char letraDNI = (char) (random.nextInt(26) + 'a');
-        dni = numero+letraDNI;
-        System.out.println(dni);
-        return dni;
+    public String generarDNI(){
+        Map<Integer, String> map = new HashMap<Integer, String>();
+        map.put(0,"T");
+        map.put(1,"R");
+        map.put(2,"W");
+        map.put(3,"A");
+        map.put(4,"G");
+        map.put(5,"M");
+        map.put(6,"Y");
+        map.put(7,"F");
+        map.put(8,"P");
+        map.put(9,"D");
+        map.put(10,"X");
+        map.put(11,"B");
+        map.put(12,"N");
+        map.put(13,"J");
+        map.put(14,"Z");
+        map.put(15,"S");
+        map.put(16,"Q");
+        map.put(17,"V");
+        map.put(18,"H");
+        map.put(19,"L");
+        map.put(20,"C");
+        map.put(21,"K");
+        map.put(22,"E");
 
+        String dni = "";
+        for (int i = 1; i <= 8; i++) {
+            int numero = (int) (Math.random() * 8);
+            dni += (numero);
+        }
+        int x = Integer.parseInt(dni);
+
+        System.out.println(x);
+        int y  = x%23;
+
+        String z = map.get(y) + x;
+        System.out.println(z);
+
+        return z;
     }
+
 
 
 }

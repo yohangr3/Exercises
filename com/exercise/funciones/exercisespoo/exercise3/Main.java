@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner lectura = new Scanner (System.in);
+        Scanner lectura = new Scanner(System.in);
         Persona persona_1 = new Persona();
-        Persona persona_2 = new Persona("Pilo" ,25,'M');
-        Persona persona_3 = new Persona("Toño",28,65465617,'M',68,1.72);
+        Persona persona_2 = new Persona("Pilo", 25, 'M');
+        Persona persona_3 = new Persona("Toño", 28, "65465617", 'M', 68, 1.72);
         System.out.print("Digite su nombre : \n");
         String nombre = lectura.next();
         System.out.print("Digite su edad : \n");
@@ -26,12 +26,18 @@ public class Main {
         persona_1.setAltura(altura);
 
 
-        System.out.println(persona_1);
-        System.out.println(persona_2);
-        System.out.println(persona_3);
         persona_1.calcularIMC();
         persona_2.calcularIMC();
         persona_3.calcularIMC();
+        persona_1.esMayorDeEdad();
+        persona_2.esMayorDeEdad();
+        persona_3.esMayorDeEdad();
+        persona_3.generarDNI();
+        System.out.println(persona_1);
+        System.out.println(persona_2);
+        System.out.println(persona_3);
+
+
 
 
 
