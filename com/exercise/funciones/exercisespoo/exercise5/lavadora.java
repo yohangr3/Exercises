@@ -23,5 +23,23 @@ public class lavadora extends Electrodomestico{
     }
 
     //Acá debe ir el método preciofinal
+    @Override
+    public double precioFinal() {
+        super.precioFinal();
+        if (carga > 30) {
+            precio_base += 50;
+        }
+        return precio_base;
+    }
 
+    @Override
+    public String toString() {
+        return "lavadora{" +
+                "carga=" + carga +
+                ", precio_base=" + precio_base +
+                ", color='" + color + '\'' +
+                ", consumoEnergetico=" + consumoEnergetico +
+                ", peso=" + peso +
+                '}';
+    }
 }

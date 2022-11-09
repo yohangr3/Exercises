@@ -1,5 +1,7 @@
 package com.exercise.funciones.exercisespoo.exercise5;
 
+import java.util.Scanner;
+
 public class Electrodomestico {
 
     double precio_base = 100;
@@ -46,9 +48,35 @@ public class Electrodomestico {
         return "";
     }
 
-    public void precioFinal(){
-        precio_base = consumoEnergetico + peso;
+    public double precioFinal(){
 
+
+        if (consumoEnergetico == 'A' ){
+            precio_base += 100;
+        } else if (consumoEnergetico == 'B') {
+            precio_base += 80;
+        } else if (consumoEnergetico == 'C') {
+            precio_base += 60;
+        } else if (consumoEnergetico == 'D') {
+            precio_base += 50;
+        } else if (consumoEnergetico == 'E') {
+            precio_base += 30;
+        } else if (consumoEnergetico == 'F') {
+            precio_base += 10;
+        }
+
+
+        if (peso >= 0 && peso <= 19){
+            precio_base += 10;
+        } else if (peso >= 20 && peso <=49) {
+            precio_base += 50;
+        } else if (peso >= 50 && peso <= 79) {
+            precio_base += 80;
+        } else if (peso >= 80) {
+            precio_base += 100;
+        }
+
+        return precio_base;
     }
 
 }
