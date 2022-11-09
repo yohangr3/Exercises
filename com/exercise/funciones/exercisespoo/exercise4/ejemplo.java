@@ -1,8 +1,4 @@
-package com.exercise.funciones.exercisespoo.exercises4;
-
-import java.util.Arrays;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+package com.exercise.funciones.exercisespoo.exercise4;
 
 public class ejemplo {
 

@@ -1,13 +1,48 @@
-package com.exercise.funciones.exercisespoo.exercises4;
+package com.exercise.funciones.exercisespoo.exercise4;
 
-public class genradorcontrasena {
+public class Password {
 
-    public static void main(String[] args) {
-        System.out.println(genrarContrasena());
+    private int longitud = 8;
+    private String contrasenaa;
 
+    public void setLongitud(int longitud) {
+        this.longitud = longitud;
     }
 
-    static String genrarContrasena(){
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public String getContrasenaa() {
+        return contrasenaa;
+    }
+
+    public void setContrasenaa(String contrasenaa) {
+        this.contrasenaa = contrasenaa;
+    }
+
+    public Password() {  //Constructor por defecto
+        longitud = 8;
+        generarPassword();
+    }
+
+
+    public Password(int longitud) {
+        this.longitud = longitud;
+        generarPassword();
+    }
+
+    public boolean esFuerte(String contrasena){
+
+        boolean esfuerte = true;
+        //if(contrasena.length() >  )
+
+        return esfuerte;
+    }
+
+
+    public String generarPassword() {
+
         char[] mayusculas ={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
         char[] minusculas ={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
         char[] numeros ={'0','1','2','3','4','5','6','7','8','9'};
@@ -30,14 +65,6 @@ public class genradorcontrasena {
             contrasena.append((caracteres.toString()).charAt(numeroRandom));
         }
         return contrasena.toString();
-    }
 
-    public boolean esFuerte(String contrasena){
-
-        boolean esfuerte = true;
-
-        //if(contrasena.contains() )
-
-            return esfuerte;
     }
 }
