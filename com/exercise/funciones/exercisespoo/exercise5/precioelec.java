@@ -1,12 +1,9 @@
 package com.exercise.funciones.exercisespoo.exercise5;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 public class precioelec {
 
     public static void main(String[] args) {
+
 
         double precio_base = 100;
         String color = "blanco";
@@ -44,12 +41,16 @@ public class precioelec {
 
         System.out.println("El precio del electrodomestico : " + precio_base);
 
-        lavadora lavadora1 = new lavadora();
+        Lavadora lavadora1 = new Lavadora(150,"gsd",'A',80,30);
         Television televisor1 = new Television();
         televisor1.precioFinal();
         televisor1.precioFinal();
         lavadora1.precioFinal();
         System.out.println(televisor1);
-        System.out.println(lavadora1);
+        System.out.println(lavadora1);  //Arreglar valor repetido precio final
+
+
+
+
     }
 }

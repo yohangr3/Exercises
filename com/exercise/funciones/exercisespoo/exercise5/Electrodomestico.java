@@ -44,8 +44,22 @@ public class Electrodomestico {
 
     }
 
-    public String comprobarColor() {
-        return "";
+    public void comprobarColor() {
+        String colores[]={"blanco", "negro", "rojo", "azul", "gris"};
+        boolean encontrado = true;
+
+        for(int i=0; i<colores.length; i++) {
+            if(colores[i].equals(color)){
+                encontrado = true;
+            }
+        }
+        if(encontrado){
+            this.color= color;
+        }else {
+            this.color=color;
+        }
+
+
     }
 
     public double precioFinal(){
