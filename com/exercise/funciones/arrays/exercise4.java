@@ -10,6 +10,8 @@ public class exercise4 {
 
 
         int matriz[][]=new int[4][4];
+        int[] diagonal = new int[matriz.length];
+        int[] diagonalSecuandaria = new int[matriz.length];
 
 
 
@@ -36,7 +38,7 @@ public class exercise4 {
         for(int j=0;j<matriz[0].length;j++){
             sumaFilas += matriz[fila - 1][j];
         }
-        System.out.println(sumaFilas);
+        System.out.println("La suma de las filas es : " + sumaFilas);
 
         System.out.println("Ingrese el número de la columna que desea sumar");
         int columna = sn.nextInt();
@@ -50,8 +52,44 @@ public class exercise4 {
         for(int i=0;i<matriz.length;i++){
             sumaColumnas += matriz[i][columna-1];
         }
-        System.out.println(sumaColumnas);
+        System.out.println("La suma de las columnas es : " +sumaColumnas);
 
+
+        for(int i=0;i<matriz.length;i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                if (i == j) {
+                    diagonal[i] = matriz[i][j];
+                }
+                if(i+j == matriz.length-1){
+                    diagonalSecuandaria[i] = matriz[i][j];
+                }
+            }
+        }
+
+        int suma =0;
+        for(int i=0;i<diagonal.length;i++) {
+            suma += diagonal[i];
+        }
+        System.out.println("La suma de la diagonal principal es : "+ suma );
+
+        int sumaSecuandaria = 0;
+        for(int i=0;i<diagonalSecuandaria.length;i++) {
+            sumaSecuandaria += diagonalSecuandaria[i];
+        }
+        System.out.println("La suma de la diagonal secundaria es : " + sumaSecuandaria );
+        System.out.println();
+
+        double sumaMatriz = 0;
+        double media = 0;
+        for(int i=0;i<matriz.length;i++){
+            for(int j=0;j<matriz[0].length;j++) {
+                sumaMatriz += matriz[i][j];
+            }
+
+        }
+        media = sumaMatriz/(matriz.length*matriz.length);
+        System.out.println(sumaMatriz + "-----" + media);
+        System.out.println();
 
         for(int i=0;i<matriz.length;i++){
             for(int j=0;j<matriz[0].length;j++){
