@@ -16,5 +16,6 @@ public class Main {
         System.out.println(persona1.mostrar());
         System.out.println(persona1.esMayorDeEdad());
         persona1.mostrarDatos();
+        System.out.println(persona1.getNombre());
     }
 }
