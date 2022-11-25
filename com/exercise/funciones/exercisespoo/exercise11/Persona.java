@@ -33,4 +33,25 @@ public class Persona {
     public void setDni(int dni) {
         this.dni = dni;
     }
+
+
+    public String mostrar() {
+        return "Persona{" +
+                "nombre='" + nombre + '\'' +
+                ", edad=" + edad +
+                ", dni=" + dni +
+                '}';
+    }
+
+    public boolean esMayorDeEdad(){
+        if(edad >= 0 && edad < 18){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Mi nombre es: " + nombre + " tengo " +edad + " con número dni " + dni);
+    }
 }
