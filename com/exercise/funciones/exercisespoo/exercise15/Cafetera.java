@@ -45,23 +45,27 @@ public class Cafetera {
     public void llenaCafetera(){
         cantidadActual = capacidadMaxima;
     }
-
+    //Arreglar
     public double servirTaza(double cantidad){
-        if(cantidadActual < cantidad){
-            cantidad = cantidadActual;
-        }else {
-            cantidad = cantidad;
-        }
-        return cantidadActual;
+        cantidad = cantidadActual - cantidad;
+        return cantidad;
     }
 
-    public void vaciarCafetera(){
+    public double vaciarCafetera(){
+
         cantidadActual = 0;
-    }
-
-    public double agregarCafe(double cantidad){
-        cantidadActual += cantidad;
         return cantidadActual;
+    }
+    //Arreglar este método , preguntar al toño
+    public double agregarCafe(double cantidad){
+        if(cantidad + cantidadActual <= capacidadMaxima) {
+            cantidadActual += cantidad;
+            return cantidad;
+        }else{
+            cantidad =capacidadMaxima -cantidadActual;
+            cantidadActual = capacidadMaxima;
+            return cantidad;
+        }
     }
 
     @Override
